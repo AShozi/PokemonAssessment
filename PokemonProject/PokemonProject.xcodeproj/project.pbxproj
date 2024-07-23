@@ -13,6 +13,14 @@
 		D856A7F82C4F974B00C4E6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856A7F62C4F974B00C4E6A5 /* Main.storyboard */; };
 		D856A7FA2C4F974C00C4E6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D856A7F92C4F974C00C4E6A5 /* Assets.xcassets */; };
 		D856A7FD2C4F974C00C4E6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856A7FB2C4F974C00C4E6A5 /* LaunchScreen.storyboard */; };
+		D856A8082C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856A8072C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard */; };
+		D856A80A2C4F990E00C4E6A5 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8092C4F990E00C4E6A5 /* APIHandler.swift */; };
+		D856A80C2C4F991E00C4E6A5 /* serverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A80B2C4F991E00C4E6A5 /* serverError.swift */; };
+		D856A80E2C4F9A1400C4E6A5 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A80D2C4F9A1400C4E6A5 /* constants.swift */; };
+		D856A8102C4F9A3A00C4E6A5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A80F2C4F9A3A00C4E6A5 /* Model.swift */; };
+		D856A8122C4F9AFB00C4E6A5 /* homescreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8112C4F9AFB00C4E6A5 /* homescreenRepository.swift */; };
+		D856A8142C4F9B1C00C4E6A5 /* HomescreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8132C4F9B1C00C4E6A5 /* HomescreenViewModel.swift */; };
+		D856A8162C4F9B3C00C4E6A5 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		D856A7F92C4F974C00C4E6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D856A7FC2C4F974C00C4E6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D856A7FE2C4F974C00C4E6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D856A8072C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomescreenStoryboard.storyboard; sourceTree = "<group>"; };
+		D856A8092C4F990E00C4E6A5 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		D856A80B2C4F991E00C4E6A5 /* serverError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serverError.swift; sourceTree = "<group>"; };
+		D856A80D2C4F9A1400C4E6A5 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		D856A80F2C4F9A3A00C4E6A5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D856A8112C4F9AFB00C4E6A5 /* homescreenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homescreenRepository.swift; sourceTree = "<group>"; };
+		D856A8132C4F9B1C00C4E6A5 /* HomescreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewModel.swift; sourceTree = "<group>"; };
+		D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,9 @@
 		D856A7EF2C4F974B00C4E6A5 /* PokemonProject */ = {
 			isa = PBXGroup;
 			children = (
+				D856A8062C4F97BD00C4E6A5 /* Constants */,
+				D856A8052C4F97B100C4E6A5 /* ServiceLayer */,
+				D856A8042C4F979B00C4E6A5 /* Homescreen */,
 				D856A7F02C4F974B00C4E6A5 /* AppDelegate.swift */,
 				D856A7F22C4F974B00C4E6A5 /* SceneDelegate.swift */,
 				D856A7F42C4F974B00C4E6A5 /* ViewController.swift */,
@@ -65,6 +84,35 @@
 				D856A7FE2C4F974C00C4E6A5 /* Info.plist */,
 			);
 			path = PokemonProject;
+			sourceTree = "<group>";
+		};
+		D856A8042C4F979B00C4E6A5 /* Homescreen */ = {
+			isa = PBXGroup;
+			children = (
+				D856A8072C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard */,
+				D856A8112C4F9AFB00C4E6A5 /* homescreenRepository.swift */,
+				D856A8132C4F9B1C00C4E6A5 /* HomescreenViewModel.swift */,
+				D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */,
+			);
+			path = Homescreen;
+			sourceTree = "<group>";
+		};
+		D856A8052C4F97B100C4E6A5 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D856A8092C4F990E00C4E6A5 /* APIHandler.swift */,
+				D856A80B2C4F991E00C4E6A5 /* serverError.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		D856A8062C4F97BD00C4E6A5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D856A80D2C4F9A1400C4E6A5 /* constants.swift */,
+				D856A80F2C4F9A3A00C4E6A5 /* Model.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D856A8082C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard in Resources */,
 				D856A7FD2C4F974C00C4E6A5 /* LaunchScreen.storyboard in Resources */,
 				D856A7FA2C4F974C00C4E6A5 /* Assets.xcassets in Resources */,
 				D856A7F82C4F974B00C4E6A5 /* Main.storyboard in Resources */,
@@ -138,9 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D856A8102C4F9A3A00C4E6A5 /* Model.swift in Sources */,
+				D856A80C2C4F991E00C4E6A5 /* serverError.swift in Sources */,
 				D856A7F52C4F974B00C4E6A5 /* ViewController.swift in Sources */,
 				D856A7F12C4F974B00C4E6A5 /* AppDelegate.swift in Sources */,
 				D856A7F32C4F974B00C4E6A5 /* SceneDelegate.swift in Sources */,
+				D856A8162C4F9B3C00C4E6A5 /* HomescreenViewController.swift in Sources */,
+				D856A8142C4F9B1C00C4E6A5 /* HomescreenViewModel.swift in Sources */,
+				D856A80A2C4F990E00C4E6A5 /* APIHandler.swift in Sources */,
+				D856A8122C4F9AFB00C4E6A5 /* homescreenRepository.swift in Sources */,
+				D856A80E2C4F9A1400C4E6A5 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
