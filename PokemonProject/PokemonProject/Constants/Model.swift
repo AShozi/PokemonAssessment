@@ -8,5 +8,13 @@
 import Foundation
 
 struct Poke:Codable {
+  
+    let name:String
+    let pokeURL:String
     
+}
+
+enum CodingKeys:String, CodingKey{
+    case name
+    case pokeURL = "url"
 }

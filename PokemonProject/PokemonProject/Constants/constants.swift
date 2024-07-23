@@ -8,5 +8,5 @@
 import Foundation
 
 struct Endpoint {
-    static let baseURL = "pokemon/ditto"
+    static let baseURL = "https://pokeapi.co/api/v2/pokemon"
 }
