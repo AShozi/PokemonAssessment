@@ -8,8 +8,8 @@
 import Foundation
 
 protocol HomescreenViewModelType:AnyObject {
-    func reload()
-    func showError()
+    func reloadView()
+    func show(error:String)
 }
 class HomescreenViewModel{
     
@@ -35,12 +35,13 @@ class HomescreenViewModel{
     }
 //dont stress u know this you can still clean
     
-    func fetchHomeResult() { [weak self] result in switch result {
+    func fetchHomeResult() { [weak self] result in 
+        switch result {
     case .success(let object):
         self.allPokeList = object
-        self.delegate.reload()
+        self.delegate.reloadView()
     case .failure (let error):
-        self.delegate.showError(error.rawValue)
+        self.delegate.show(error.rawValue)
     }
         
         
