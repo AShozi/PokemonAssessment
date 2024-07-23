@@ -11,7 +11,6 @@ enum APIError:String ,Error{
     case internalServerError
     case invalidURL
     case parsingError
-    
 }
 
 enum Method {
