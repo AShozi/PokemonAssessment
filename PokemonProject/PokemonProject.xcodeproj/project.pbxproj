@@ -23,6 +23,7 @@
 		D856A8162C4F9B3C00C4E6A5 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */; };
 		D856A8192C4FACC200C4E6A5 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8182C4FACC200C4E6A5 /* toDo.swift */; };
 		D856A81D2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D856A81B2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld */; };
+		D856A8222C4FB55B00C4E6A5 /* coreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8212C4FB55B00C4E6A5 /* coreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
 		D856A8182C4FACC200C4E6A5 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 		D856A81C2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		D856A8212C4FB55B00C4E6A5 /* coreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D856A81B2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld */,
+				D856A8212C4FB55B00C4E6A5 /* coreDataClass.swift */,
 			);
 			path = coreData;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				D856A7F52C4F974B00C4E6A5 /* ViewController.swift in Sources */,
 				D856A7F12C4F974B00C4E6A5 /* AppDelegate.swift in Sources */,
 				D856A7F32C4F974B00C4E6A5 /* SceneDelegate.swift in Sources */,
+				D856A8222C4FB55B00C4E6A5 /* coreDataClass.swift in Sources */,
 				D856A8162C4F9B3C00C4E6A5 /* HomescreenViewController.swift in Sources */,
 				D856A8142C4F9B1C00C4E6A5 /* HomescreenViewModel.swift in Sources */,
 				D856A80A2C4F990E00C4E6A5 /* APIHandler.swift in Sources */,
