@@ -7,6 +7,19 @@
 
 import Foundation
 
-//typealias HomescreenResult = Result
+typealias HomescreenResult = Result (<[Poke],APIError>) -> Void
+
+protocol HomescreenRepositoryType: AnyObject {
+    func fetchHomeResult (completion: @escaping HomescreenResult)
+}
+
+class HomescreenRepository:HomescreenRepositoryType {
+    
+    func fetchHomeResult (
+    
+    //implement session for apple auto complete
+        URLsession.shared.request(
+    )
+}
 
 
