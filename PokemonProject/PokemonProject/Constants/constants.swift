@@ -9,4 +9,5 @@ import Foundation
 
 struct Endpoint {
     static let baseURL = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=100"
+    static let images = ""
 }

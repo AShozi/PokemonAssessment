@@ -8,22 +8,33 @@
 import UIKit
 
 class HomescreenViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var homeTableview: UITableView!
+    private lazy var HomescreenViewController(HomescreenViewModel(repository: HomescreenRepositoryType))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpTableView()
     }
     
+    //MARK: - Navigation
+    
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UIViewController : UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        HomescreenViewModel.allPokeListCount
     }
-    */
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    // going to have a perform segue thats sends the id
 
 }
