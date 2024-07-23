@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+typealias InfoscreenResult = (Result<[poke]>,APIError) -> Void
+
+protocol InfoScreenRepositoryType:AnyObject {
+    func fetchInfoResult(completion: @escaping InfoscreenResult)
+}
+
+class InfoScreenRepository:InfoScreenRepositoryType {
+    func fetchInfoResult(completion: @escaping InfoscreenResult) {
+        <#code#>
+    }
+}
+
