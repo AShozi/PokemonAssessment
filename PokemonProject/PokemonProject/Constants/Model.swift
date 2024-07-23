@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Poke:Codable {
+struct poke:Codable {
   
     let name:String
     let pokeURL:String
