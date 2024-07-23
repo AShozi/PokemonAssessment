@@ -30,18 +30,26 @@ class HomescreenViewModel{
     
     //functions
     
+    func reloadView(){
+        
+    }
+    
+    func show(){
+        
+    }
+    
     func pokeAtIndex(atIndex:Int) -> poke {
         allPokeList[atIndex]
     }
 //dont stress u know this you can still clean
     
-    func fetchHomeResult() { [weak self] result in 
+    func fetchHomeResult() { [weak self] result in
         switch result {
     case .success(let object):
-        self.allPokeList = object
-        self.delegate.reloadView()
+            self.allPokeList = object
+            self.delegate?.reloadView()
     case .failure (let error):
-        self.delegate.show(error.rawValue)
+            self.delegate?.show(error.rawValue)
     }
         
         
