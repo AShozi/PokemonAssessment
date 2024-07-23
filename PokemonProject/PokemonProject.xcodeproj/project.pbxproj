@@ -24,6 +24,11 @@
 		D856A8192C4FACC200C4E6A5 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8182C4FACC200C4E6A5 /* toDo.swift */; };
 		D856A81D2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D856A81B2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld */; };
 		D856A8222C4FB55B00C4E6A5 /* coreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8212C4FB55B00C4E6A5 /* coreDataClass.swift */; };
+		D856A8272C4FCAD800C4E6A5 /* InfoscreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8262C4FCAD800C4E6A5 /* InfoscreenViewModel.swift */; };
+		D856A8292C4FCAEE00C4E6A5 /* InfoScreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8282C4FCAEE00C4E6A5 /* InfoScreenRepository.swift */; };
+		D856A82B2C4FCB4100C4E6A5 /* InfoscreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A82A2C4FCB4100C4E6A5 /* InfoscreenModel.swift */; };
+		D856A82D2C4FCB6B00C4E6A5 /* InfoscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A82C2C4FCB6B00C4E6A5 /* InfoscreenViewController.swift */; };
+		D856A82F2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856A82E2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		D856A8182C4FACC200C4E6A5 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 		D856A81C2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D856A8212C4FB55B00C4E6A5 /* coreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataClass.swift; sourceTree = "<group>"; };
+		D856A8262C4FCAD800C4E6A5 /* InfoscreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoscreenViewModel.swift; sourceTree = "<group>"; };
+		D856A8282C4FCAEE00C4E6A5 /* InfoScreenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenRepository.swift; sourceTree = "<group>"; };
+		D856A82A2C4FCB4100C4E6A5 /* InfoscreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoscreenModel.swift; sourceTree = "<group>"; };
+		D856A82C2C4FCB6B00C4E6A5 /* InfoscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoscreenViewController.swift; sourceTree = "<group>"; };
+		D856A82E2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoscreenStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		D856A7EF2C4F974B00C4E6A5 /* PokemonProject */ = {
 			isa = PBXGroup;
 			children = (
+				D856A8232C4FCAA000C4E6A5 /* InfoScreen */,
 				D856A81A2C4FB30400C4E6A5 /* coreData */,
 				D856A8062C4F97BD00C4E6A5 /* Constants */,
 				D856A8052C4F97B100C4E6A5 /* ServiceLayer */,
@@ -140,6 +151,18 @@
 			path = coreData;
 			sourceTree = "<group>";
 		};
+		D856A8232C4FCAA000C4E6A5 /* InfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D856A8262C4FCAD800C4E6A5 /* InfoscreenViewModel.swift */,
+				D856A8282C4FCAEE00C4E6A5 /* InfoScreenRepository.swift */,
+				D856A82A2C4FCB4100C4E6A5 /* InfoscreenModel.swift */,
+				D856A82C2C4FCB6B00C4E6A5 /* InfoscreenViewController.swift */,
+				D856A82E2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard */,
+			);
+			path = InfoScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D856A82F2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard in Resources */,
 				D856A8082C4F97F100C4E6A5 /* HomescreenStoryboard.storyboard in Resources */,
 				D856A7FD2C4F974C00C4E6A5 /* LaunchScreen.storyboard in Resources */,
 				D856A7FA2C4F974C00C4E6A5 /* Assets.xcassets in Resources */,
@@ -213,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D856A8102C4F9A3A00C4E6A5 /* Model.swift in Sources */,
+				D856A8292C4FCAEE00C4E6A5 /* InfoScreenRepository.swift in Sources */,
 				D856A80C2C4F991E00C4E6A5 /* serverError.swift in Sources */,
 				D856A8192C4FACC200C4E6A5 /* toDo.swift in Sources */,
 				D856A7F52C4F974B00C4E6A5 /* ViewController.swift in Sources */,
@@ -223,8 +248,11 @@
 				D856A8142C4F9B1C00C4E6A5 /* HomescreenViewModel.swift in Sources */,
 				D856A80A2C4F990E00C4E6A5 /* APIHandler.swift in Sources */,
 				D856A8122C4F9AFB00C4E6A5 /* homescreenRepository.swift in Sources */,
+				D856A82B2C4FCB4100C4E6A5 /* InfoscreenModel.swift in Sources */,
 				D856A81D2C4FB32F00C4E6A5 /* coreDataModel.xcdatamodeld in Sources */,
 				D856A80E2C4F9A1400C4E6A5 /* constants.swift in Sources */,
+				D856A8272C4FCAD800C4E6A5 /* InfoscreenViewModel.swift in Sources */,
+				D856A82D2C4FCB6B00C4E6A5 /* InfoscreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
