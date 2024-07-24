@@ -8,25 +8,30 @@
 import UIKit
 
 class HomescreenViewController: UIViewController {
-    
+
     
     @IBOutlet weak var homeTableview: UITableView!
-    private lazy var HomescreenViewController(HomescreenViewModel(repository: HomescreenRepositoryType))
+    
+    private lazy var viewModel = HomescreenViewModel(repository: HomescreenRepository(),delegate: self)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
     }
+    func setUpTableView() {
+        
+    }
     
-    //MARK: - Navigation
+    
+    //MARK:  Navigation
     
     
 }
 
-extension UIViewController : UITableViewDelegate, UITableViewDataSource {
+extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        HomescreenViewModel.allPokeListCount
+        viewModel.allPokeListCount
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,6 +44,16 @@ extension UIViewController : UITableViewDelegate, UITableViewDataSource {
     }
     // going to have a perform segue thats sends the id
 
-)
+}
 
+extension HomescreenViewController :HomescreenViewModelDelegate {
+    func reloadView() {
+        homeTableview.reloadData()
+    }
+    
+    func show(error: String) {
+        <#code#>
+    }
+    
+    
 }

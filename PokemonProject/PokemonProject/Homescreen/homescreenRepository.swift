@@ -16,10 +16,8 @@ protocol HomescreenRepositoryType: AnyObject {
 
 class HomescreenRepository:HomescreenRepositoryType {
     func fetchHomeResult(completion: @escaping HomescreenResult) {
-//        URLSession.shared.request
+        URLSession.shared.request(endpoint: Endpoint.baseURL, method: .GET, completion: completion)
     }
-//    func fetchAPIimage ()
-    
 
 }
 
