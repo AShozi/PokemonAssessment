@@ -20,7 +20,9 @@ class HomescreenViewController: UIViewController {
         setUpTableView()
     }
     func setUpTableView() {
-        
+        homeTableview.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: "homeCell")
+        homeTableview.delegate
+        homeTableview.dataSource
     }
     
     
@@ -35,7 +37,11 @@ extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = homeTableview.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath)
+        cell.textLabel!.text = "Cell text"
+            
+        return cell
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         <#code#>
