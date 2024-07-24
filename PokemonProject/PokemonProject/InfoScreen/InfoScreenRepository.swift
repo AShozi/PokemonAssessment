@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias InfoscreenResult = (Result<[poke]>,APIError) -> Void
+typealias InfoscreenResult = (Result<[pokeInfo]>,APIError) -> Void
 
 protocol InfoScreenRepositoryType:AnyObject {
     func fetchInfoResult(completion: @escaping InfoscreenResult)
@@ -15,7 +15,7 @@ protocol InfoScreenRepositoryType:AnyObject {
 
 class InfoScreenRepository:InfoScreenRepositoryType {
     func fetchInfoResult(completion: @escaping InfoscreenResult) {
-        <#code#>
+        URLSession.shared.request(endpoint: Endpoint.baseURL, method: .GET, completion: completion)
     }
 }
 

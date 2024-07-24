@@ -7,23 +7,26 @@
 
 import Foundation
 
-protocol InfoscreenViewModelType:AnyObject {
+// MARK: Delegate
+
+protocol InfoscreenViewModelDelegate:AnyObject {
     func reloadView()
     func show(error:String)
 }
 class InfoscreenViewModel{
-    var repository: InfoscreenRepositoryType?
-    weak var delegate:InfoscreenViewModel?
-    var allPokeList: [poke] = []
     
-    init(repository: InfoscreenRepositoryType? = nil, delegate: InfoscreenViewModel? = nil) {
+    // MARK: Variables
+    
+    var repository: InfoScreenRepositoryType?
+    weak var delegate:InfoscreenViewModelDelegate?
+    var allPokeList: [pokeInfo] = []
+    
+    init(repository: InfoScreenRepositoryType, delegate: InfoscreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
     
     //computed properties
-    
-    
-    
+
     
 }

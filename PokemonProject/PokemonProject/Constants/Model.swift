@@ -10,10 +10,11 @@ import Foundation
 struct poke:Codable {
   
     let name:String
-    let pokeURL:String
+    let url:String
 }
 
-enum CodingKeys:String, CodingKey{
-    case name
-    case pokeURL = "url"
-}
+//enum CodingKeys:String, CodingKey{
+//    case name
+//    case pokeURL = "url"
+//}
+

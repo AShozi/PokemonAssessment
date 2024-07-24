@@ -9,12 +9,12 @@ import UIKit
 
 class InfoscreenViewController: UIViewController {
 
- //Mark: IBoutlets
+ //MARK: IBoutlets
     
     @IBOutlet weak var infoName: UILabel!
     @IBOutlet weak var infoImage: UIImageView!
     @IBOutlet weak var statLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
