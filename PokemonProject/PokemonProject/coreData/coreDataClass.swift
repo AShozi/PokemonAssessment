@@ -11,12 +11,12 @@ import CoreData
 extension Pokemon {
 
 //apple docs implementation
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Pokemon> {
-        return NSFetchRequest<Pokemon>(entityName: "Pokemon")
-    }
+//    @nonobjc public class func fetchRequest() -> NSFetchRequest<Pokemon> {
+//        return NSFetchRequest<Pokemon>(entityName: "Pokemon")
+//    }
 
-    @NSManaged public var name: String?
-    @NSManaged public var pokeUrl: String?
+//    @NSManaged public var name: String?
+//    @NSManaged public var pokeUrl: String?
 
 }
 

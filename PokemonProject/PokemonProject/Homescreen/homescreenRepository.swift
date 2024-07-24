@@ -11,12 +11,14 @@ typealias HomescreenResult = (Result <[poke],APIError>) -> Void
 
 protocol HomescreenRepositoryType: AnyObject {
     func fetchHomeResult (completion: @escaping HomescreenResult)
+//    func fetchAPIimage (completion)
 }
 
 class HomescreenRepository:HomescreenRepositoryType {
     func fetchHomeResult(completion: @escaping HomescreenResult) {
-       
+//        URLSession.shared.request
     }
+//    func fetchAPIimage ()
     
 
 }
