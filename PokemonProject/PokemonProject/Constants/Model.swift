@@ -13,5 +13,3 @@ struct poke:Codable {
     let url:String
     
 }
-
-

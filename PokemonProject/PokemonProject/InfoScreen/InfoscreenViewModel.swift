@@ -17,16 +17,12 @@ class InfoscreenViewModel{
     
     // MARK: Variables
     
-    var repository: InfoScreenRepositoryType?
-    weak var delegate:InfoscreenViewModelDelegate?
+    private  var repository: InfoScreenRepositoryType?
+    private weak var delegate:InfoscreenViewModelDelegate?
     var allPokeList: [pokeInfo] = []
     
     init(repository: InfoScreenRepositoryType, delegate: InfoscreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
-    
-    //computed properties
-
-    
 }

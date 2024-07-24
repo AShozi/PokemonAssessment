@@ -17,8 +17,5 @@ class InfoscreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-
 }
