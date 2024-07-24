@@ -44,7 +44,7 @@ extension URLSession {
             }
         }
     }
-    dataTask.resume()
+//    dataTask.resume()
 }
 
 
