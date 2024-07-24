@@ -17,7 +17,12 @@ class homeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+//    func configCell(Poke:poke) {
+//        let nameLabel.text = Poke.name
+//    }
+//    UITableViewCell
+//    
+//    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
