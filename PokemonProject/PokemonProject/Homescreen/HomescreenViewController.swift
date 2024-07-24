@@ -9,27 +9,29 @@ import UIKit
 
 class HomescreenViewController: UIViewController {
 
+    //MARK: IBOutlet:
     
     @IBOutlet weak var homeTableview: UITableView!
     
+    //MARK: UIComponent
+    
     private lazy var viewModel = HomescreenViewModel(repository: HomescreenRepository(),delegate: self)
     
+    //MARK: Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        viewModel.fetchHomeResult()
     }
     func setUpTableView() {
-        homeTableview.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: "homeCell")
-        homeTableview.delegate
-        homeTableview.dataSource
+        homeTableview.register(homeTableViewCell.self, forCellReuseIdentifier: "homeCell")
+        homeTableview.delegate = self
+        homeTableview.dataSource = self
     }
-    
-    
-    //MARK:  Navigation
-    
-    
 }
+
+//MARK: Extensions
 
 extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,16 +40,22 @@ extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource 
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = homeTableview.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath)
-        cell.textLabel!.text = "Cell text"
-            
+       guard let cell = homeTableview.dequeueReusableCell(withIdentifier: "homeCell") as?
+        homeTableViewCell else {
+            return UITableViewCell()
+        }
+    
+        let poke = viewModel.allPokeList[indexPath.row]
+        cell.configCell(Poke:poke)
         return cell
+        
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-
+//        viewModel.pokeAtIndex(atIndex: indexPath)
+//
+//        performSegue(withIdentifier identifier: String, sender: "\(name)")
     }
-//     going to have a perform segue thats sends the id
+    
 
 }
 
@@ -57,7 +65,7 @@ extension HomescreenViewController :HomescreenViewModelDelegate {
     }
     
     func show(error: String) {
-        <#code#>
+//        displayAlert(error: "")
     }
     
     

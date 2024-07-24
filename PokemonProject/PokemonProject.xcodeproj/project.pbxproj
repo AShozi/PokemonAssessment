@@ -31,6 +31,7 @@
 		D856A82F2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856A82E2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard */; };
 		D856A8332C4FD57300C4E6A5 /* homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A8312C4FD57300C4E6A5 /* homeTableViewCell.swift */; };
 		D856A8342C4FD57300C4E6A5 /* homeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D856A8322C4FD57300C4E6A5 /* homeTableViewCell.xib */; };
+		D8D0B8382C51246100DA070D /* HomescreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0B8372C51246100DA070D /* HomescreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		D856A82E2C4FCBBE00C4E6A5 /* InfoscreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoscreenStoryboard.storyboard; sourceTree = "<group>"; };
 		D856A8312C4FD57300C4E6A5 /* homeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeTableViewCell.swift; sourceTree = "<group>"; };
 		D856A8322C4FD57300C4E6A5 /* homeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeTableViewCell.xib; sourceTree = "<group>"; };
+		D8D0B8372C51246100DA070D /* HomescreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				D856A8112C4F9AFB00C4E6A5 /* homescreenRepository.swift */,
 				D856A8132C4F9B1C00C4E6A5 /* HomescreenViewModel.swift */,
 				D856A8152C4F9B3C00C4E6A5 /* HomescreenViewController.swift */,
+				D8D0B8372C51246100DA070D /* HomescreenModel.swift */,
 			);
 			path = Homescreen;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D856A80C2C4F991E00C4E6A5 /* serverError.swift in Sources */,
 				D856A8332C4FD57300C4E6A5 /* homeTableViewCell.swift in Sources */,
 				D856A8192C4FACC200C4E6A5 /* toDo.swift in Sources */,
+				D8D0B8382C51246100DA070D /* HomescreenModel.swift in Sources */,
 				D856A7F52C4F974B00C4E6A5 /* ViewController.swift in Sources */,
 				D856A7F12C4F974B00C4E6A5 /* AppDelegate.swift in Sources */,
 				D856A7F32C4F974B00C4E6A5 /* SceneDelegate.swift in Sources */,

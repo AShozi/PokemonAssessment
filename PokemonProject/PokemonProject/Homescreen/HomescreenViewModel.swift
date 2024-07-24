@@ -13,16 +13,16 @@ protocol HomescreenViewModelDelegate:AnyObject {
 }
 class HomescreenViewModel{
     
-    var repository: HomescreenRepositoryType?
-    weak var delegate:HomescreenViewModelDelegate?
-    var allPokeList: [poke] = []
+    private var repository: HomescreenRepositoryType?
+    private  weak var delegate:HomescreenViewModelDelegate?
+     var allPokeList: [poke] = []
     
     init(repository: HomescreenRepositoryType, delegate: HomescreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
     
-    //computed Properties
+    //MARK: Computed Properties
     
     var allPokeListCount:Int {
         allPokeList.count
