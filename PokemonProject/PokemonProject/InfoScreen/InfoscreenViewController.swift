@@ -8,14 +8,23 @@
 import UIKit
 
 class InfoscreenViewController: UIViewController {
-
+ 
+//    var pokemonName:String
+    
  //MARK: IBoutlets
     
     @IBOutlet weak var infoName: UILabel!
     @IBOutlet weak var infoImage: UIImageView!
-    @IBOutlet weak var statLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    
+    private lazy var viewModel = InfoscreenViewController(repository:InfoScreenRepository(), delegate: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchInfoResult{
+            infoName.text =  viewModel.infoName
+//            viewModel.infoImage
+            viewModel = viewModel.stateLabel
+        }
     }
 }

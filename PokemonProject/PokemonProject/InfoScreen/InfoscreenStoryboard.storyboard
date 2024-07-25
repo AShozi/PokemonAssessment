@@ -40,7 +40,7 @@
                     <connections>
                         <outlet property="infoImage" destination="5HO-Gb-yt8" id="KMQ-gD-wfE"/>
                         <outlet property="infoName" destination="lYp-54-UeV" id="Arv-dB-Suz"/>
-                        <outlet property="statLabel" destination="HZE-GQ-ou4" id="fjE-i1-6lO"/>
+                        <outlet property="stateLabel" destination="HZE-GQ-ou4" id="fjE-i1-6lO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
