@@ -7,19 +7,16 @@
 
 import Foundation
 
-typealias HomescreenResult = (Result <[poke],APIError>) -> Void
+typealias HomescreenResult = (Result <PokemonListResponse,APIError>) -> Void
 
 protocol HomescreenRepositoryType: AnyObject {
     func fetchHomeResult (completion: @escaping HomescreenResult)
-//    func fetchAPIimage (completion)
 }
 
 class HomescreenRepository:HomescreenRepositoryType {
     func fetchHomeResult(completion: @escaping HomescreenResult) {
-//        URLSession.shared.request
+        URLSession.shared.request(endpoint: Endpoint.baseURL, method: .GET, completion: completion)
     }
-//    func fetchAPIimage ()
-    
 
 }
 

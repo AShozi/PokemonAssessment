@@ -7,49 +7,40 @@
 
 import Foundation
 
-protocol HomescreenViewModelType:AnyObject {
+protocol HomescreenViewModelDelegate:AnyObject {
     func reloadView()
     func show(error:String)
 }
 class HomescreenViewModel{
     
-    var repository: HomescreenRepositoryType?
-    weak var delegate:HomescreenViewModel?
-    var allPokeList: [poke] = []
+    private private var repository: HomescreenRepositoryType?
+    private   weak var delegate:HomescreenViewModelDelegate?
+     var allPokeList: [PokemonList] = []
     
-    init(repository: HomescreenRepositoryType? = nil, delegate: HomescreenViewModel? = nil) {
+    init(repository: HomescreenRepositoryType, delegate: HomescreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
     
-    //computed Properties
+    //MARK: Computed Properties
     
     var allPokeListCount:Int {
         allPokeList.count
     }
-    
-    //functions
-    
-    func reloadView(){
-        
-    }
-    
-    func show(){
-        
-    }
-    
-    func pokeAtIndex(atIndex:Int) -> poke {
+  
+    func pokeAtIndex(atIndex:Int) -> PokemonList {
         allPokeList[atIndex]
     }
-    //dont stress u know this you can still clean
     
-    func fetchHomeResult() { [weak self] result in
-        switch result {
-        case .success(let object):
-            self.allPokeList = object
-            self.delegate?.reloadView()
-        case .failure (let error):
-            self.delegate?.show(error.rawValue)
+    func fetchHomeResult() {
+        repository?.fetchHomeResult { [weak self] (result: (Result <PokemonListResponse,APIError>)) in
+            switch result {
+            case .success(let object):
+                self?.allPokeList = object.PokemonListResponse
+                self?.delegate?.reloadView()
+            case .failure (let error):
+                self?.delegate?.show(error:error.rawValue)
+            }
         }
     }
 }

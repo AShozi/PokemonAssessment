@@ -8,37 +8,63 @@
 import UIKit
 
 class HomescreenViewController: UIViewController {
-    
+
+    //MARK: IBOutlet:
     
     @IBOutlet weak var homeTableview: UITableView!
-    private lazy var HomescreenViewController(HomescreenViewModel(repository: HomescreenRepositoryType))
     
+    //MARK: UIComponent
+    
+    private lazy var viewModel = HomescreenViewModel(repository: HomescreenRepository(),delegate: self)
+    
+    //MARK: Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        viewModel.fetchHomeResult()
     }
-    
-    //MARK: - Navigation
-    
-    
+    func setUpTableView() {
+        homeTableview.register(homeTableViewCell.homeTableViewNib(), forCellReuseIdentifier: "homeCell")
+        homeTableview.delegate = self
+        homeTableview.dataSource = self
+    }
 }
 
-extension UIViewController : UITableViewDelegate, UITableViewDataSource {
+//MARK: Extensions
+
+extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        HomescreenViewModel.allPokeListCount
+        viewModel.allPokeListCount
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+       guard let cell = homeTableview.dequeueReusableCell(withIdentifier: "homeCell") as?
+        homeTableViewCell else {
+            return UITableViewCell()
+        }
+    
+        let pokemonList = viewModel.allPokeList[indexPath.row]
+        cell.configCell(PokemonList:pokemonList)
+        return cell
+        
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-        
-        
+        let selectedCharacter = viewModel.pokeAtIndex(atIndex: indexPath.row)
+        performSegue(withIdentifier: "infoSegue", sender:  selectedCharacter.name)
     }
-    // going to have a perform segue thats sends the id
 
-)
+}
 
+extension HomescreenViewController :HomescreenViewModelDelegate {
+    func reloadView() {
+        homeTableview.reloadData()
+    }
+    
+    func show(error: String) {
+
+    }
+    
+    
 }
