@@ -10,11 +10,16 @@ import Foundation
 struct PokemonListResponse: Codable {
     
     let count:Int
-    let next: Int
-    let previous: String
-    let results: [PokemonCharacter]
+    let next: String
+    let previous: String?
+    let PokemonListResponse : [PokemonList]
+    
+    enum CodingKeys: String, CodingKey{
+        case count,next,previous
+        case PokemonListResponse = "results"
+    }
 }
-struct PokemonCharacter:Codable {
+struct PokemonList:Codable {
     let name: String
     let url: String
 }

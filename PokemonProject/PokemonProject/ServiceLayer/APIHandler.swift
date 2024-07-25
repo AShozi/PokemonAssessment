@@ -23,28 +23,29 @@ extension URLSession {
     private func call <T:Codable> (with request: URLRequest,completion:((Result <T,APIError>) -> Void)) {
         let dataTask = URLSession.shared.dataTask (with: request) { data, _, error in
             guard error == nil else {
-                completion(.failure(.serverError))
-            }
-            return
-        }
-        do {
-            guard let data else{
-                DispatchQueue.main.async {
+                DispatchQueue.main.async{
                     completion(.failure(.serverError))
                 }
                 return
             }
-            let object = try JSONDecoder().decode(T.self, from: data)
-            DispatchQueue.main.async {
-                completion(.success(object))
-            }
-        } catch {
-            DispatchQueue.main.async {
-                completion(.failure(.parsingError))
+            do {
+                guard let data else{
+                    DispatchQueue.main.async {
+                        completion(.failure(.serverError))
+                    }
+                    return
+                }
+                let object = try JSONDecoder().decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(object))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(.parsingError))
+                }
             }
         }
+        dataTask.resume()
     }
-//    dataTask.resume()
 }
-
 

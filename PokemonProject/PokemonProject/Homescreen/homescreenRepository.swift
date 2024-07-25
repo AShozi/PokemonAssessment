@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias HomescreenResult = (Result <[poke],APIError>) -> Void
+typealias HomescreenResult = (Result <PokemonListResponse,APIError>) -> Void
 
 protocol HomescreenRepositoryType: AnyObject {
     func fetchHomeResult (completion: @escaping HomescreenResult)

@@ -15,7 +15,7 @@ class HomescreenViewModel{
     
     private var repository: HomescreenRepositoryType?
     private  weak var delegate:HomescreenViewModelDelegate?
-     var allPokeList: [poke] = []
+     var allPokeList: [PokemonListResponse] = []
     
     init(repository: HomescreenRepositoryType, delegate: HomescreenViewModelDelegate) {
         self.repository = repository
@@ -28,15 +28,15 @@ class HomescreenViewModel{
         allPokeList.count
     }
   
-    func pokeAtIndex(atIndex:Int) -> poke {
+    func pokeAtIndex(atIndex:Int) -> PokemonList {
         allPokeList[atIndex]
     }
     
     func fetchHomeResult() {
-        repository?.fetchHomeResult { [weak self] result in
+        repository?.fetchHomeResult { [weak self] (result: (Result <PokemonListResponse,APIError>)) in
             switch result {
             case .success(let object):
-                self?.allPokeList = object
+                self?.allPokeList = object.PokemonListResponse
                 self?.delegate?.reloadView()
             case .failure (let error):
                 self?.delegate?.show(error:error.rawValue)

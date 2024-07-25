@@ -25,7 +25,7 @@ class HomescreenViewController: UIViewController {
         viewModel.fetchHomeResult()
     }
     func setUpTableView() {
-        homeTableview.register(homeTableViewCell.self, forCellReuseIdentifier: "homeCell")
+        homeTableview.register(homeTableViewCell.homeTableViewNib(), forCellReuseIdentifier: "homeCell")
         homeTableview.delegate = self
         homeTableview.dataSource = self
     }
@@ -45,15 +45,15 @@ extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
     
-        let poke = viewModel.allPokeList[indexPath.row]
-        cell.configCell(Poke:poke)
+        let pokemonList = viewModel.allPokeList[indexPath.row]
+        cell.configCell(PokemonList:pokemonList)
         return cell
         
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        viewModel.pokeAtIndex(atIndex: indexPath)
-//
-//        performSegue(withIdentifier identifier: String, sender: "\(name)")
+        let selectedCharacter = viewModel.pokeAtIndex(atIndex: indexPath.row)
+        performSegue(withIdentifier: "infoSegue", sender: "\(name)")
+
     }
     
 

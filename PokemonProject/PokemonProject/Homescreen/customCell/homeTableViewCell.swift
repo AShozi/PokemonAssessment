@@ -24,8 +24,8 @@ class homeTableViewCell: UITableViewCell {
 //        let mainImage
     }
     
-    static func homeTableViewNib() -> UINib() {
-        UINib(nibName: homeTableViewCell, bundle: nil)
+    static func homeTableViewNib() -> UINib {
+        UINib(nibName: "homeTableViewCell", bundle: nil)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

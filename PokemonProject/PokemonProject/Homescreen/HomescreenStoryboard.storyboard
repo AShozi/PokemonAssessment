@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="l7A-0Q-fTJ" kind="show" trigger="accessoryAction" id="BxA-KI-dXG"/>
+                                            <segue destination="l7A-0Q-fTJ" kind="show" identifier="infoSegue" trigger="accessoryAction" id="BxA-KI-dXG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
