@@ -13,8 +13,8 @@ protocol HomescreenViewModelDelegate:AnyObject {
 }
 class HomescreenViewModel{
     
-    private var repository: HomescreenRepositoryType?
-    private  weak var delegate:HomescreenViewModelDelegate?
+    private private var repository: HomescreenRepositoryType?
+    private   weak var delegate:HomescreenViewModelDelegate?
      var allPokeList: [PokemonList] = []
     
     init(repository: HomescreenRepositoryType, delegate: HomescreenViewModelDelegate) {
