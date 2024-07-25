@@ -8,23 +8,34 @@
 import UIKit
 
 class InfoscreenViewController: UIViewController {
- 
-//    var pokemonName:String
+
+    var pokemonName:String?
     
  //MARK: IBoutlets
     
-    @IBOutlet weak var infoName: UILabel!
-    @IBOutlet weak var infoImage: UIImageView!
-    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak private var infoName: UILabel!
+    @IBOutlet weak private var infoImage: UIImageView!
+    @IBOutlet weak private var stateLabel: UILabel!
     
-    private lazy var viewModel = InfoscreenViewController(repository:InfoScreenRepository(), delegate: self)
+    //MARK: UI Components
+    private lazy var viewModel = InfoscreenViewModel(repository:InfoScreenRepository(), delegate: self)
 
+    //MARK: Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchInfoResult{
-            infoName.text =  viewModel.infoName
-//            viewModel.infoImage
-            viewModel = viewModel.stateLabel
+        if let name = pokemonName{
+            viewModel.fetchInfoResult(with: name)
         }
     }
+}
+
+extension InfoscreenViewController: InfoscreenViewModelDelegate {
+    func reloadView() {
+    }
+    
+    func show(error: String) {
+    }
+    
+
 }

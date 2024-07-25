@@ -26,6 +26,8 @@ class InfoscreenViewModel{
         self.delegate = delegate
     }
     
+    //MARK: Functions
+    
     func fetchInfoResult(with name: String) {
         repository?.fetchInfoResult(name:name) { [weak self] result in
             switch result {

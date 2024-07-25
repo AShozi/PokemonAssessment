@@ -15,7 +15,7 @@ protocol InfoScreenRepositoryType:AnyObject {
 
 class InfoScreenRepository:InfoScreenRepositoryType {
     func fetchInfoResult(name:String,completion: @escaping InfoscreenResult) {
-        let URL = Endpoint.baseURL + "\(name)"
+        let URL = Endpoint.detailURL + "\(name)"
         URLSession.shared.request(endpoint: URL, method: .GET, completion: completion)
     }
 }

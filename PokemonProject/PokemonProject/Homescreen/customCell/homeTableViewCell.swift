@@ -21,7 +21,6 @@ class homeTableViewCell: UITableViewCell {
     }
     func configCell(PokemonList:PokemonList) {
         nameLabel.text = PokemonList.name
-//        let mainImage
     }
     
     static func homeTableViewNib() -> UINib {
