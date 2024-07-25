@@ -10,7 +10,7 @@
         <!--Infoscreen View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="InfoscreenViewController" customModule="PokemonProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoscreenStoryboard" id="Y6W-OH-hqX" customClass="InfoscreenViewController" customModule="PokemonProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                     <connections>
                         <outlet property="infoImage" destination="5HO-Gb-yt8" id="KMQ-gD-wfE"/>
                         <outlet property="infoName" destination="lYp-54-UeV" id="Arv-dB-Suz"/>
-                        <outlet property="statLabel" destination="HZE-GQ-ou4" id="fjE-i1-6lO"/>
+                        <outlet property="stateLabel" destination="HZE-GQ-ou4" id="fjE-i1-6lO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

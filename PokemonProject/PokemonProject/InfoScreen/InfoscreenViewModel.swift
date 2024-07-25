@@ -7,23 +7,37 @@
 
 import Foundation
 
-protocol InfoscreenViewModelType:AnyObject {
+// MARK: Delegate
+
+protocol InfoscreenViewModelDelegate:AnyObject {
     func reloadView()
     func show(error:String)
 }
 class InfoscreenViewModel{
-    var repository: InfoscreenRepositoryType?
-    weak var delegate:InfoscreenViewModel?
-    var allPokeList: [poke] = []
     
-    init(repository: InfoscreenRepositoryType? = nil, delegate: InfoscreenViewModel? = nil) {
+    // MARK: Variables
+    
+    private  var repository: InfoScreenRepositoryType?
+    private weak var delegate:InfoscreenViewModelDelegate?
+    var pokemonInfo : InfoView?
+    
+    init(repository: InfoScreenRepositoryType, delegate: InfoscreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
     
-    //computed properties
+    //MARK: Functions
     
-    
-    
+    func fetchInfoResult(with name: String) {
+        repository?.fetchInfoResult(name:name) { [weak self] result in
+            switch result {
+            case.success(let response):
+                self?.pokemonInfo = response
+                self?.delegate?.reloadView()
+            case.failure(let error):
+                self?.delegate?.show(error:error.rawValue)
+            }
+        }
+    }
     
 }

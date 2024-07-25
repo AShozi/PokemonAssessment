@@ -6,14 +6,3 @@
 //
 
 import Foundation
-
-struct poke:Codable {
-  
-    let name:String
-    let pokeURL:String
-}
-
-enum CodingKeys:String, CodingKey{
-    case name
-    case pokeURL = "url"
-}

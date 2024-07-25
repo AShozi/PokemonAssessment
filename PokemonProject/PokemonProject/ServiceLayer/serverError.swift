@@ -8,9 +8,10 @@
 import Foundation
 
 enum APIError:String ,Error{
-    case internalServerError
+    case internalError
     case invalidURL
     case parsingError
+    case serverError
 }
 
 enum Method {
