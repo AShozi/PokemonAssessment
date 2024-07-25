@@ -7,11 +7,6 @@
 
 import Foundation
 
-//struct pokeInfo:Codable {
-//    let name:String
-//    let url:String
-//}
-
 struct InfoView:Codable {
     
     let name: String

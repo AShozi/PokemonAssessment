@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias InfoscreenResult = (Result<[InfoView],APIError>) -> Void
+typealias InfoscreenResult = (Result<InfoView,APIError>) -> Void
 
 protocol InfoScreenRepositoryType:AnyObject {
     func fetchInfoResult(name:String,completion: @escaping InfoscreenResult)

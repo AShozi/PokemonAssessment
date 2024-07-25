@@ -19,14 +19,14 @@ class InfoscreenViewModel{
     
     private  var repository: InfoScreenRepositoryType?
     private weak var delegate:InfoscreenViewModelDelegate?
-    var pokemonInfo : [InfoView] = []
+    var pokemonInfo : InfoView?
     
     init(repository: InfoScreenRepositoryType, delegate: InfoscreenViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
     
-    func fetchInfoResult(with:name) {
+    func fetchInfoResult(with name: String) {
         repository?.fetchInfoResult(name:name) { [weak self] result in
             switch result {
             case.success(let response):
