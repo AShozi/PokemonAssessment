@@ -19,8 +19,8 @@ class homeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func configCell(Poke:poke) {
-        let nameLabel = Poke.name
+    func configCell(PokemonList:PokemonList) {
+        nameLabel.text = PokemonList.name
 //        let mainImage
     }
     

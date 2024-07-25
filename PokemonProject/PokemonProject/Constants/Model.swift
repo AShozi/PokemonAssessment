@@ -6,10 +6,3 @@
 //
 
 import Foundation
-
-struct poke:Codable {
-    
-    let name:String
-    let url:String
-    
-}

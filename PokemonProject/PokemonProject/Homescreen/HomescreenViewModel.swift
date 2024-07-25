@@ -15,7 +15,7 @@ class HomescreenViewModel{
     
     private var repository: HomescreenRepositoryType?
     private  weak var delegate:HomescreenViewModelDelegate?
-     var allPokeList: [PokemonListResponse] = []
+     var allPokeList: [PokemonList] = []
     
     init(repository: HomescreenRepositoryType, delegate: HomescreenViewModelDelegate) {
         self.repository = repository
