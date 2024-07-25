@@ -11,8 +11,8 @@ class homeTableViewCell: UITableViewCell {
 
     // MARK: IBOutlets
     
-    @IBOutlet weak var mainImage: UIImageView!    
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak private var mainImage: UIImageView!
+    @IBOutlet weak private var nameLabel: UILabel!
     
     //MARK: Functions
     

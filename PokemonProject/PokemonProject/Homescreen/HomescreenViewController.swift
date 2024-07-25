@@ -52,9 +52,8 @@ extension HomescreenViewController : UITableViewDelegate, UITableViewDataSource 
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCharacter = viewModel.pokeAtIndex(atIndex: indexPath.row)
-//        performSegue(withIdentifier: "infoSegue", sender:  "\(name)")
+        performSegue(withIdentifier: "infoSegue", sender:  selectedCharacter.name)
     }
-    
 
 }
 
@@ -64,7 +63,7 @@ extension HomescreenViewController :HomescreenViewModelDelegate {
     }
     
     func show(error: String) {
-//        displayAlert(error: "")
+
     }
     
     
